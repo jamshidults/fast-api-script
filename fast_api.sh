@@ -7,8 +7,8 @@ set -e
 CURRENT_USER=$USER
 PROJECT_NAME="fls_backup"
 APP_DIR="$HOME/$PROJECT_NAME"
-GIT_REPO="https://github.com/jamshidults/fls_backup.git"  # Replace with your repo URL
-GIT_BRANCH="main"  # Replace with your branch name
+GIT_REPO="https://github.com/jamshidults/fls_backup.git"
+GIT_BRANCH="main"
  
 # Colors for output
 RED='\033[0;31m'
