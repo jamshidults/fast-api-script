@@ -93,7 +93,7 @@ User=$CURRENT_USER
 Group=$CURRENT_USER
 WorkingDirectory=$APP_DIR
 Environment="PATH=$APP_DIR/venv/bin"
-Environment="DATABASE_URL=sqlite:///orders.db"
+Environment="DATABASE_URL=sqlite+aiosqlite:///./orders.db"
 ExecStart=$APP_DIR/venv/bin/uvicorn main:app --host 0.0.0.0 --port 8000 --workers 3
  
 # Restart on failure
