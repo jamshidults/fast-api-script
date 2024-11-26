@@ -29,17 +29,29 @@ print_error() {
     echo -e "${RED}[ERROR]${NC} $1"
 }
  
+# Update system and install dependencies
+print_message "Updating system and installing required packages..."
+sudo apt update
+sudo apt install -y software-properties-common
+
+# Add deadsnakes PPA for Python versions
+print_message "Adding deadsnakes PPA for Python 3.12..."
+sudo add-apt-repository -y ppa:deadsnakes/ppa
+sudo apt update
+
+# Install Python 3.12 and related packages
+print_message "Installing Python 3.12..."
+sudo apt install -y python3.12 python3.12-venv python3.12-dev
+
+# Install git
+print_message "Installing git..."
+sudo apt install -y git
+ 
 # Check if git repository already exists
 if [ -d "$APP_DIR" ]; then
     print_message "Directory $APP_DIR already exists. Backing it up..."
     mv "$APP_DIR" "${APP_DIR}_backup_$(date +%Y%m%d_%H%M%S)"
 fi
- 
-# Update system and install dependencies
-print_message "Updating system and installing git Python 3.12..."
-sudo apt update
-sudo apt install -y git
-sudo apt install -y python3.12 python3.12-venv
  
 # Clone the repository
 print_message "Cloning repository from $GIT_REPO..."
@@ -91,9 +103,6 @@ RestartSec=3
 # Logging
 StandardOutput=append:/var/log/fastapi/access.log
 StandardError=append:/var/log/fastapi/error.log
- 
-# Security measures
-
  
 [Install]
 WantedBy=multi-user.target
