@@ -21,15 +21,15 @@ reset_database() {
 }
 
 # Save the function to a script
-echo '#!/bin/bash' > ~/reset_fastapi_db.sh
-declare -f reset_database >> ~/reset_fastapi_db.sh
-echo 'reset_database' >> ~/reset_fastapi_db.sh
+echo '#!/bin/bash' > ~/fls_backup/reset_fastapi_db.sh
+declare -f reset_database >> ~/fls_backup/reset_fastapi_db.sh
+echo 'reset_database' >> ~/fls_backup/reset_fastapi_db.sh
 
 # Make the script executable
-chmod +x ~/reset_fastapi_db.sh
+chmod +x ~/fls_backup/reset_fastapi_db.sh
 
 # Set up cron job to run at 10 PM every day
-(crontab -l 2>/dev/null; echo "0 22 * * * $HOME/reset_fastapi_db.sh") | crontab -
+(crontab -l 2>/dev/null; echo "0 22 * * * $HOME/fls_backup/reset_fastapi_db.sh") | crontab -
 
-echo "Database reset script created at ~/reset_fastapi_db.sh"
+echo "Database reset script created at ~/fls_backup/reset_fastapi_db.sh"
 echo "Cron job set up to run daily at 10 PM"
