@@ -1,6 +1,6 @@
 # fast-api-script
 
-## install Fast API Backup Application
+## Install the Fast API Backup Application
 - clone the repository
 - cd directory
 - chmod +x fast_api.sh
