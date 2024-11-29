@@ -43,7 +43,7 @@
 
 #### Copy Log database every Hour
 
-- [ ] `chmod +x copy_log_db_cron.sh
+- [ ] `chmod +x copy_log_db_cron.sh`
 - [ ] `./copy_log_db_cron.sh`
 
 
