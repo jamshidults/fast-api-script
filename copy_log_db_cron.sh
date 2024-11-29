@@ -4,7 +4,7 @@
 backup_database() {
     # Define paths
     DB_PATH="$HOME/fls_backup/orders.db"
-    CURRENT_DIR="$HOME/LOGS/Current"
+    CURRENT_DIR="$HOME/shared_folder/LOG/Current"
 
     # Create Current directory if it doesn't exist
     mkdir -p "$CURRENT_DIR"

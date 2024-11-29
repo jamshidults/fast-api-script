@@ -51,4 +51,4 @@
 #### Configure the backup URL in the Odoo app : Retails Settings
 
 - [ ] backupURL : http://machine_ip:8000/orders
-- [ ] Disable log push scheduled action from odoo technical settings
+- [ ] Disable log push scheduled action from odoo technical settings and disable log file on os level crontab also

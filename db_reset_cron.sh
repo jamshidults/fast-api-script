@@ -7,7 +7,7 @@ reset_database() {
 
     # Define paths
     DB_PATH="$HOME/fls_backup/orders.db"
-    ARCHIVE_DIR="$HOME/LOGS/archived"
+    ARCHIVE_DIR="$HOME/shared_folder/LOG/archived"
 
     # Create archive directory if it doesn't exist
     mkdir -p "$ARCHIVE_DIR"
