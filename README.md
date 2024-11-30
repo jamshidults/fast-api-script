@@ -23,6 +23,10 @@
   - In the Firefox address bar, type `about:config`
   - Search for `print.always`
   - Set it to `true`
+- [ ] Set Default URL on the startup:
+  - In the Firefox address bar, type `about:config`
+  - Search for `browser.startup.homepage`
+  - click edit pen icon and set the url `http://server_ip:8069`
 
 ## Install and Configure Backup Application
 
@@ -47,7 +51,7 @@
 
 #### Configure the backup URL in the Odoo app : Retails Settings
 
-- [ ] backupURL : http://machine_ip:8000/orders
+- [ ] backupURL : http://server_ip:8000/orders
 - [ ] Disable log push scheduled action from odoo technical settings and 
 - [ ] disable log file on os level crontab also
 - [ ] Remove unwanted crontab job using crontab -e
