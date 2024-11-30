@@ -49,3 +49,17 @@
 
 - [ ] backupURL : http://machine_ip:8000/orders
 - [ ] Disable log push scheduled action from odoo technical settings and disable log file on os level crontab also
+
+
+### To reset and Startover
+``` bash
+cd fls_backup/
+./manage_service.sh stop
+sudo systemctl disable fastapi
+sudo rm /etc/systemd/system/fastapi.service
+cd ..
+rm -rf fls_backup/
+
+then download and execute the script
+wget https://github.com/jamshidults/fast-api-script/archive/refs/heads/main.tar.gz
+```
