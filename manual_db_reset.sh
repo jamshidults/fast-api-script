@@ -15,8 +15,15 @@ if [[ $confirm == [yY] || $confirm == [yY][eE][sS] ]]; then
     sudo systemctl stop fastapi
 
     # Remove the existing database file
-    DB_PATH="$HOME/fls_backup/orders.db"
+    DB_PATH="$HOME/shared_folder/LOG/current/orders.db"
+    ARCHIVE_DIR="$HOME/shared_folder/LOG/archived"
+    mkdir -p "$ARCHIVE_DIR"
     if [ -f "$DB_PATH" ]; then
+        ARCHIVE_PATH="$ARCHIVE_DIR/orders.db"
+
+        # Copy the database to archive location
+        cp -f "$DB_PATH" "$ARCHIVE_PATH"
+        echo "Database archived to: $ARCHIVE_PATH"
         rm "$DB_PATH"
         echo "Database file deleted: $DB_PATH"
     else

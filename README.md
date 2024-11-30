@@ -41,10 +41,7 @@
 - [ ] `chmod +x db_reset_cron.sh`
 - [ ] `./db_reset_cron.sh`
 
-#### Copy Log database every Hour
 
-- [ ] `chmod +x copy_log_db_cron.sh`
-- [ ] `./copy_log_db_cron.sh`
 
 
 

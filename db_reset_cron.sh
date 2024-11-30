@@ -6,7 +6,7 @@ reset_database() {
     sudo systemctl stop fastapi
 
     # Define paths
-    DB_PATH="$HOME/fls_backup/orders.db"
+    DB_PATH="$HOME/shared_folder/LOG/current/orders.db"
     ARCHIVE_DIR="$HOME/shared_folder/LOG/archived"
 
     # Create archive directory if it doesn't exist
